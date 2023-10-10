@@ -22,7 +22,7 @@ function newFlight(req, res) {
 }
 
 async function create(req, res) {
-    console.log(req.body);
+    // console.log(req.body);
     await Flight.create(req.body);
     //redirect to movies index
     res.redirect('/flights');
