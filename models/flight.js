@@ -6,9 +6,9 @@ const flightSchema = new Schema({
     airline: {
         type: String,
         enum: [
-            'American',
-            'Southwest',
-            'United',
+            'Americano',
+            'Southweast',
+            'Poo-nited',
         ]
     },
     airport: {
@@ -28,9 +28,9 @@ const flightSchema = new Schema({
     },
     departs: {
        type: Date,
-       default: Date.toLocaleString(),
+       default: new Date(new Date().getFullYear()+1).getDate(),
     },
-})
+});
 
 //compile schema and export
 //'Flight' will be 'flights' in MongoDB

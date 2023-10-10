@@ -4,9 +4,9 @@
 <form action="/flights" method="POST">
     <label>Airline: 
         <select name="airline">
-            <option value="American"></option>
-            <option value="Southwest"></option>
-            <option value="United"></option>
+            <option value="Americano">Americano</option>
+            <option value="Southweast">SouthWeast</option>
+            <option value="Poo-nited">Poo-nited</option>
         </select>
     </label><br>
     <label>Airport:
@@ -23,8 +23,9 @@
     </label><br>
     <label>
         <input type="datetime-local" name="departs">
-    </label>
+    </label><br>
+    <button type="submit">Add Flight</button>
 </form>
+&nbsp;
 
-
-<%- include('../partials/footer') %>
+<%- include('../partials/header') %>
