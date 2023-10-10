@@ -7,7 +7,7 @@ const flightsCtrl = require('../controllers/flights');
 router.get('/', flightsCtrl.index);
 
 //localhost:3000/flights/new
-router.get('/new', moviesCtrl.new);
+router.get('/new', flightsCtrl.new);
 
 
 module.exports = router;

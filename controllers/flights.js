@@ -17,5 +17,5 @@ function index(req, res) {
 }
 
 function newFlight(req, res) {
-    res.render('movies/new.ejs', { errorMsg: ''});
+    res.render('flights/new.ejs', { errorMsg: ''});
 }
