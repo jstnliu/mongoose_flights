@@ -4,6 +4,7 @@ module.exports = {
     index,
     new: newFlight,
     create,
+    show,
 }
 
 function index(req, res) {
@@ -26,4 +27,11 @@ async function create(req, res) {
     await Flight.create(req.body);
     //redirect to movies index
     res.redirect('/flights');
+}
+
+//.show 
+async function show(req, res) {
+    //specific flights page
+    const flight = await Flight.findById(req.params.id);
+    res.render('flights/show', {title: 'Flight Details', flight})
 }

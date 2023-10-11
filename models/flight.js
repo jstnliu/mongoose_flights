@@ -13,7 +13,7 @@ const destinationsSchema = new Schema({
             'SAN',
         ]
     },
-    arrival: {
+    arrivals: {
         type: Date,
     },
 })
@@ -46,7 +46,7 @@ const flightSchema = new Schema({
        type: Date,
        default: new Date(new Date().getFullYear() + 1, new Date().getMonth(), new Date().getDate()),
     },
-    destination: [destinationsSchema],
+    destinations: [destinationsSchema],
 });
 
 //compile schema and export
