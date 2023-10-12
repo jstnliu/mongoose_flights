@@ -18,10 +18,10 @@
     <% if (ticket.length) { %>
         <div>Current Tickets:
         <ul>
-            <% tickets.forEach((ticket) => { %>
+            <% ticket.forEach((t) => { %>
                 <li>
-                    Seat No.: <%= ticket.seat %>
-                    Price (USD): $<%= ticket.price %>
+                    Seat No.: <%= t.seat %>,
+                    Price (USD): $<%= t.price %>
                 </li>
             <% }); %>
         </ul>

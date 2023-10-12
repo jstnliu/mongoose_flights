@@ -1,7 +1,5 @@
 const express = require('express');
 const router = express.Router();
-
-//is red because not being called?
 ticketsCtrl = require('../controllers/tickets')
 
 //GET /flights/:id/ticket/new

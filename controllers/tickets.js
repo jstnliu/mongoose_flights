@@ -16,13 +16,12 @@ async function newTicket(req, res) {
 async function create(req, res) {
     req.body.flight = req.params.id
     try {
-    //still need to assoc ticket with flight?
         await Ticket.create(req.body);
 
     } catch(err) {
         console.log(err);
     }
-    res.redirect(`/flight/${req.params.id}`)
+    res.redirect(`/flights/${req.params.id}`)
 }
 
 async function addTicket(req, res) {
