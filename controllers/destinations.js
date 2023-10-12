@@ -17,3 +17,4 @@ module.exports = {
     //response to change
     res.redirect(`/flights/${flight._id}`);
 }
+
