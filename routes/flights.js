@@ -8,6 +8,7 @@ router.get('/', flightsCtrl.index);
 
 //localhost:3001/flights/new
 router.get('/new', flightsCtrl.new);
+
 //localhost:3001/flights
 //GET /flights/:id/destinations
 router.get('/:id/', flightsCtrl.show )

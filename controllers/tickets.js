@@ -9,13 +9,16 @@ module.exports = {
 
 async function newTicket(req, res) {
     const flight = await Flight.findById(req.params.id);
-    res.render('tickets/new', { title: 'Add Ticket', flight});
+    const ticket = await Ticket.find({flight: flight._id});
+    res.render('tickets/new', { title: 'Add Ticket', flight, ticket});
 }
 
 async function create(req, res) {
     req.body.flight = req.params.id
     try {
+    //still need to assoc ticket with flight?
         await Ticket.create(req.body);
+
     } catch(err) {
         console.log(err);
     }
@@ -24,7 +27,8 @@ async function create(req, res) {
 
 async function addTicket(req, res) {
     const flight = await Flight.findById(req.params.id);
-    flight.push(req.body.ticketId);
-    await flight.save();
+    const createdTicket = new Ticket(req.body);
+    createdTicket.flight = flight;
+    await createdTicket.save();
     res.redirect(`/flights/${flight._id}`)
 }
